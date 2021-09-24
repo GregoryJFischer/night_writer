@@ -25,4 +25,23 @@ describe LetToBra do
 
     expect(test).to eq "0.0...\n..0.00\n.....0\n"
   end
+
+  it '#final_text' do
+    test = ""
+
+    41.times do
+      test += " "
+    end
+
+    test_final = @l.final_text(test)
+
+    expect(test_final.length).to eq 252
+
+    test_final_split = test_final.split("")
+    new_lines = test_final_split.select { |letter| letter == "\n" }
+    spaces = test_final_split.select { |letter| letter == "."}
+
+    expect(new_lines.length).to eq 6
+    expect(spaces.length).to eq 246
+  end
 end
