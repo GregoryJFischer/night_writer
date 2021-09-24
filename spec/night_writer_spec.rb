@@ -1,2 +1,6 @@
 require 'rspec'
-requrie './lib/runner.rb'
+require './lib/night_writer.rb'
+
+describe 'night writer' do
+  
+end

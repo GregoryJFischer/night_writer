@@ -6,4 +6,6 @@ o_file = File.open(o_file_name, 'w')
 
 i_text = i_file.read
 
-o_file.write(i_text.upcase)
+# o_file.write(i_text.upcase)
+
+p "Created '#{o_file_name}' containing #{i_text.length} characters"
