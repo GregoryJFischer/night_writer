@@ -18,4 +18,15 @@ class LetToBra
 
     first_line + "\n" + second_line + "\n" + third_line + "\n"
   end
+
+  def final_text(input)
+    final = ""
+    split_text = input.scan(/.{1,40}/)
+
+    split_text.each do |text|
+      final += convert(text)
+    end
+    
+    final
+  end
 end
