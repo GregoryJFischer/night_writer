@@ -1,7 +1,4 @@
-class Characters
-  def initialize
-  end
-
+module Characters
   def b_by_n
     {
       'a' => {first: '0.', second: '..', third: '..'},
