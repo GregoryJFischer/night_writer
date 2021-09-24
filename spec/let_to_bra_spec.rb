@@ -19,10 +19,10 @@ describe LetToBra do
   it '#convert' do
     a = @l.convert("a")
 
-    expect(a).to eq "0.\n..\n.."
+    expect(a).to eq "0.\n..\n..\n"
 
     test = @l.convert("ab.")
 
-    expect(test).to eq "0.0...\n..0.00\n.....0"
+    expect(test).to eq "0.0...\n..0.00\n.....0\n"
   end
 end

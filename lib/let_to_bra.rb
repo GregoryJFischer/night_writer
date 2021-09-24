@@ -16,6 +16,6 @@ class LetToBra
       third_line += b_by_n[char][:third]
     end
 
-    first_line + "\n" + second_line + "\n" + third_line
+    first_line + "\n" + second_line + "\n" + third_line + "\n"
   end
 end
