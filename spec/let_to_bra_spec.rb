@@ -44,4 +44,8 @@ describe LetToBra do
     expect(new_lines.length).to eq 6
     expect(spaces.length).to eq 246
   end
+
+  it '#end_message' do
+    expect(@l.end_message('name', 1)).to eq "Created 'name' containing 1 characters"
+  end
 end

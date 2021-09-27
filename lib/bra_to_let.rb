@@ -17,4 +17,8 @@ class BraToLet
     end 
     final
   end
+
+  def end_message(file_name, file_length)
+    p "Created '#{file_name}' containing #{file_length} characters"
+  end
 end

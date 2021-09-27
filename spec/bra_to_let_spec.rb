@@ -19,4 +19,8 @@ describe BraToLet do
   it '#convert' do
     expect(@b.convert("..0.\n....\n....\n")).to eq " a"
   end
+  
+  it '#end_message' do
+    expect(@b.end_message('name', 1)).to eq "Created 'name' containing 1 characters"
+  end
 end
