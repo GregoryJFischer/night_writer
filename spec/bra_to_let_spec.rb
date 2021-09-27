@@ -23,4 +23,10 @@ describe BraToLet do
   it '#end_message' do
     expect(@b.end_message('name', 1)).to eq "Created 'name' containing 1 characters"
   end
+
+  it 'coverts uppercase letters' do
+    test = @b.convert("..0.\n....\n.0..\n")
+
+    expect(test).to eq "A"
+  end
 end
