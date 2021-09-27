@@ -35,7 +35,8 @@ module Characters
       '!' => {first: '..', second: '00', third: '0.'},
       '?' => {first: '..', second: '0.', third: '00'},
       '*' => {first: '..', second: '.0', third: '0.'},
-      '_' => {first: '..', second: '..', third: '00'}
+      '_' => {first: '..', second: '..', third: '00'},
+      uppercase: {first: '..', second: '..', third: '.0'}
     }
   end
 end

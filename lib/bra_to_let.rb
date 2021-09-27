@@ -32,9 +32,18 @@ class BraToLet
       row.transpose    
     end
 
+    flag = false
+
     lines.each do |line|
       line.each do |character|
-        final += n_by_b[character]
+        if flag == true
+          final += n_by_b[character].upcase
+          flag = false
+        elsif n_by_b[character] == :uppercase
+          flag = true
+        else
+          final += n_by_b[character]
+        end
       end
     end
     final
