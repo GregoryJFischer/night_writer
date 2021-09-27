@@ -8,13 +8,35 @@ class BraToLet
 
     rows = string.split("\n")
 
-    split_rows = rows.map { |row| row.scan(/.{2}/) }
+    i = 0
+    all_rows = []
+    row_set = []
+    
+    while i < rows.length do
+      row_set << rows[i]  
+      row_set << rows[i+1]  
+      row_set << rows[i+2]
 
-    characters = split_rows.transpose
+      all_rows << row_set
+      row_set = []
+      i += 3
+    end
 
-    characters.each do | character |
-      final += n_by_b[character]
-    end 
+    grouped_rows = all_rows.map do |set|
+      set.map do |row|
+        row.scan(/.{2}/)
+      end
+    end
+
+    lines = grouped_rows.map do | row |
+      row.transpose    
+    end
+
+    lines.each do |line|
+      line.each do |character|
+        final += n_by_b[character]
+      end
+    end
     final
   end
 
