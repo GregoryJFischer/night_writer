@@ -11,8 +11,12 @@ describe BraToLet do
   end
 
   it '#n_by_b' do
-    expect(@b.n_by_b[[['0.'],['..'],['..']]]).to eq 'a'
-    expect(@b.n_by_b[[['00'],['00'],['0.']]]).to eq 'q'
-    expect(@b.n_by_b[[['..'],['..'],['..']]]).to eq ' '
+    expect(@b.n_by_b[['0.','..','..']]).to eq 'a'
+    expect(@b.n_by_b[['00','00','0.']]).to eq 'q'
+    expect(@b.n_by_b[['..','..','..']]).to eq ' '
+  end
+
+  it '#convert' do
+    expect(@b.convert("..0.\n....\n....\n")).to eq " a"
   end
 end
