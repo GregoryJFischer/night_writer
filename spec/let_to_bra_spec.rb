@@ -48,4 +48,9 @@ describe LetToBra do
   it '#end_message' do
     expect(@l.end_message('name', 1)).to eq "Created 'name' containing 1 characters"
   end
+
+  it '#uppercase?' do
+    expect(@l.uppercase?('a')).to eq false
+    expect(@l.uppercase?('A')).to eq true
+  end
 end

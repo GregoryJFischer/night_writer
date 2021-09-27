@@ -33,4 +33,12 @@ class LetToBra
   def end_message(file_name, file_length)
     p "Created '#{file_name}' containing #{file_length} characters"
   end
+
+  def uppercase?(char)
+    if char =~ /[A-Z]/
+      true
+    else
+      false
+    end
+  end
 end
