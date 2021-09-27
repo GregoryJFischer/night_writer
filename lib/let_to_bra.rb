@@ -11,6 +11,13 @@ class LetToBra
     third_line = ''
 
     chars.each do |char|
+      if uppercase?(char) == true
+        first_line += b_by_n[:uppercase][:first]
+        second_line += b_by_n[:uppercase][:second]  
+        third_line += b_by_n[:uppercase][:third]
+      end
+      
+      char.downcase!
       first_line += b_by_n[char][:first]
       second_line += b_by_n[char][:second]
       third_line += b_by_n[char][:third]

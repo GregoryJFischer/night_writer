@@ -18,7 +18,7 @@ describe LetToBra do
 
   it '#convert' do
     a = @l.convert("a")
-
+    
     expect(a).to eq "0.\n..\n..\n"
 
     test = @l.convert("ab.")
@@ -52,5 +52,11 @@ describe LetToBra do
   it '#uppercase?' do
     expect(@l.uppercase?('a')).to eq false
     expect(@l.uppercase?('A')).to eq true
+  end
+
+  it 'coverts uppercase letters' do
+    test = @l.convert('A')
+
+    expect(test).to eq "..0.\n....\n.0..\n"
   end
 end
