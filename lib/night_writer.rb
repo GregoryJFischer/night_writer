@@ -1,4 +1,5 @@
 require_relative 'let_to_bra'
+require_relative 'bra_to_let'
 
 i_file_name = ARGV[0]
 o_file_name = ARGV[1]
