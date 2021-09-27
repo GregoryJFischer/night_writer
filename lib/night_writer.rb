@@ -1,4 +1,5 @@
 require_relative 'let_to_bra'
+require_relative 'bra_to_let'
 
 i_file_name = ARGV[0]
 o_file_name = ARGV[1]
@@ -9,9 +10,14 @@ o_file = File.open(o_file_name, 'w')
 i_text = i_file.read
 
 to_braille = LetToBra.new
+to_text = BraToLet.new
 
-o_text = to_braille.final_text(i_text)
+if i_text.include?("0")
+  o_text = to_text.convert(i_text)
+  to_text.end_message(o_file_name, o_text.length)
+else
+  o_text = to_braille.final_text(i_text)
+  to_braille.end_message(o_file_name, i_text.length)
+end
 
 o_file.write(o_text)
-
-p "Created '#{o_file_name}' containing #{i_text.length} characters"
