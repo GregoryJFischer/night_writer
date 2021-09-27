@@ -1,4 +1,4 @@
-module Braile
+module Braille
   def n_by_b
     {
       [['0.'],['..'],['..']] => 'a',
